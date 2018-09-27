@@ -10,21 +10,36 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :recipe_title %>
-  </div>
+     <%= form.label :title %>
+     <%= form.text_field :title, id: :recipe_title, class: "form-control" %>
+   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :recipe_description %>
-  </div>
-      <%= form.nested_fields_for :ingredients do | ingredient| %>
-        <%= ingredient.text_field :content %>
-        <%= ingredient.remove_nested_fields_link %>
-      <% end %>
-      <%= add_nested_fields_link :ingredients %>
+
+   <div class="field">
+     <%= form.label :description %>
+     <%= form.text_area :description, id: :recipe_description, class: "form-control" %>
+   </div>
+
+
+   <div class="form-group">
+     <h3>Add Ingredients</h3>
+       <%= form.nested_fields_for :ingredients do |ingredient| %>
+         <%= ingredient.text_field :content %>
+         <%= ingredient.remove_nested_fields_link %>
+       <% end %>
+         <%= form.add_nested_fields_link :ingredients %>
+   </div>
+
+
+     <div class="form-group">
+       <h3>Add Steps</h3>
+         <%= form.nested_fields_for :steps do |step| %>
+           <%= step.text_field :direction %>
+           <%= step.remove_nested_fields_link %>
+         <% end %>
+           <%= form.add_nested_fields_link :steps %>
+     </div>
 
 
   <div class="actions">
