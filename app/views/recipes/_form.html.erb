@@ -36,9 +36,9 @@
      <h2>Ingredients</h2>
        <%= form.nested_fields_for :ingredients do |ingredient| %>
          <%= ingredient.text_field :content %>
-         <%= ingredient.remove_nested_fields_link 'Remove', class:'btn btn-danger btn-sm', role: 'button' %>
+         <%= ingredient.remove_nested_fields_link 'Remove', class: 'btn', role: 'button'%>
        <% end %>
-         <%= form.add_nested_fields_link :ingredients, 'Add ingredient', class:'btn btn-primary', role: 'button'%>
+         <%= form.add_nested_fields_link :ingredients, 'Add ingredient', class:'button' , role: 'button'%>
    </div>
 
 
@@ -46,9 +46,9 @@
        <h2>Steps</h2>
          <%= form.nested_fields_for :steps do |step| %>
            <%= step.text_field :direction %>
-           <%= step.remove_nested_fields_link 'Remove', class:'btn btn-danger btn-sm', role: 'button' %>
+           <%= step.remove_nested_fields_link 'Remove', class:'btn', role: 'button' %>
          <% end %>
-           <%= form.add_nested_fields_link :steps, 'Add Step', class:'btn btn-primary', role: 'button'%>
+           <%= form.add_nested_fields_link :steps, 'Add Step', class:'button', role: 'button'%>
      </div>
 
 
