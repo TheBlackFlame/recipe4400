@@ -44,7 +44,7 @@ a:link {
 
 body{
   font-family: 'Montserrat';
-  background-image: url("https://pixabay.com/get/e835b60d2bf2073ed1534705fb094796e074e1dc1cb90c4090f3c970a1e4bdbadf/black-1072366_1920.jpg");
+  background-image: url("bg-image.jpg");
   color: White;
 }
 h1{
@@ -109,7 +109,35 @@ h4{
     }
   }
 }
+.button__group2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-content:center;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 2px solid #ff0101;
+  text-align: center;
 
+  .button {
+    display: inline-block;
+    flex: 1 50%;
+    background-color: transparent;
+    border-radius: 0;
+    color: #ff0101;
+    border-right: 2px solid #ff0101;
+    transition: all .2s ease-out;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &:hover, &.active {
+      color:#fff;
+      background-color: #ff0101;
+    }
+  }
+}
 
 .btn {
     background-color: DodgerBlue;
