@@ -1,12 +1,11 @@
 img.recipe-show {
-  width: 400px;
+  width: 100%;
   height: auto;
 }
 .recipe-box {
-  height: 600px;
+  height: 500px;
   position: relative;
-  box-shadow: 10px 10px 5px #888888;
-  background: #bdc3c7;
+  background: #grey;
   margin-bottom: 20px;
 }
 
@@ -24,4 +23,104 @@ img.recipe-index {
 
 .recipe-box li:first-child {
   font-size: 24px;
+}
+a:link {
+    text-decoration: none;
+  }
+
+.container{
+  width: 80%;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
+
+body{
+  font-family: 'Montserrat';
+  background-image: url("https://pixabay.com/get/e835b60d2bf2073ed1534705fb094796e074e1dc1cb90c4090f3c970a1e4bdbadf/black-1072366_1920.jpg");
+  color: White;
+}
+h1{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 5em;
+  color: #ff0101;
+  text-align: center;
+}
+
+h2{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3em;
+    color: #ff0101;
+}
+h3{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2em;
+  padding: 4px;
+  color: #ff0101;
+}
+h4{
+  font-family: 'Montserrat';
+  font-size: 1em;
+  padding: 4px;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 16px;
+  height: 36px;
+  background-color: #ed1c24;
+  color: white;
+  border-radius: 18px;
+}
+
+.button__group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-content:stretch;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 2px solid #ff0101;
+  text-align: center;
+
+  .button {
+    display: inline-block;
+    flex: 1 100%;
+    background-color: transparent;
+    border-radius: 0;
+    color: #ff0101;
+    border-right: 2px solid #ff0101;
+    transition: all .2s ease-out;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &:hover, &.active {
+      color:#fff;
+      background-color: #ff0101;
+    }
+  }
+}
+
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
 }

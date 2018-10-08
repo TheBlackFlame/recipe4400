@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'nested_form_fields'
 gem 'execjs'
 gem 'carrierwave', '~>1.0'
+gem 'fog-aws'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -28,7 +29,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-end 
+end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
